@@ -1,0 +1,14 @@
+version: '3'
+services:
+  # app:
+  #   build: .
+  #   volumes:
+  #     - ./work:/work
+  #   ports:
+  #     - 8888:5000
+  web:
+    image: httpd:alpine
+    volumes:
+      - ./work:/usr/local/apache2/htdocs
+    ports:
+      - 8080:80
